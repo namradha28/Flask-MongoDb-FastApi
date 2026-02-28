@@ -1,94 +1,55 @@
-🎓 Student Management System
-FastAPI + MongoDB + Flask (Full Stack Application)
+# 🎓 Student Management System  
+## 🚀 FastAPI + MongoDB + Flask (Full Stack Production-Style Project)
 
-A modern full-stack web application built using FastAPI (Backend API), MongoDB (Database), and Flask (Frontend UI).
+A modern, full-stack web application built using **FastAPI (Backend API)**, **MongoDB (NoSQL Database)**, and **Flask (Frontend UI)**.
 
-This project demonstrates REST API development, NoSQL database integration, and professional frontend-backend communication with a clean, responsive dashboard UI.
+This project demonstrates REST API development, NoSQL database integration, clean architecture, and professional frontend-backend communication. Designed as a resume-ready, portfolio-grade application.
 
-🚀 Tech Stack
-🔹 Backend
-FastAPI
-Uvicorn
-PyMongo
-Pydantic
-🔹 Database
-MongoDB (NoSQL)
+---
 
-🔹 Frontend
-Flask
-HTML5
-CSS3 (Modern Dashboard UI)
-Jinja2 Templates
+# 🌐 Live Architecture Overview
 
-Features
-✅ Create Student (POST API)
-✅ View Students (GET API)
-✅ Delete Student (DELETE API)
-✅ MongoDB Integration
-✅ Swagger API Documentation
-✅ Responsive Dashboard UI
-✅ Glassmorphism Design
-✅ Clean Full Stack Architecture
+Flask Frontend  
+⬇  
+FastAPI REST API  
+⬇  
+MongoDB Database  
 
-🏗 Architecture
-Flask Frontend
-↓
-FastAPI REST API
-↓
-MongoDB Database
+---
 
-⚙️ Installation & Setup
-1️⃣ Clone Repository
+# 🛠 Tech Stack
 
-git clone https://github.com/your-username/fastapi-flask-mongo.git
+## 🔹 Backend
+- FastAPI
+- Uvicorn (ASGI Server)
+- PyMongo
+- Pydantic
+- Python 3.x
 
-cd fastapi-flask-mongo
+## 🔹 Database
+- MongoDB (NoSQL, Document-based)
 
-2️⃣ Setup MongoDB
+## 🔹 Frontend
+- Flask
+- HTML5
+- CSS3 (Modern Dashboard UI)
+- Jinja2 Templates
 
-Make sure MongoDB is installed and running:
+---
 
-mongod
+# ✨ Core Features
 
-MongoDB runs on:
-mongodb://localhost:27017/
+- ✅ Create Student (POST API)
+- ✅ View Students (GET API)
+- ✅ Delete Student (DELETE API)
+- ✅ MongoDB Document Storage
+- ✅ RESTful API Architecture
+- ✅ Swagger Documentation (/docs)
+- ✅ Modern Glassmorphism Dashboard
+- ✅ Responsive UI Design
+- ✅ Clean Folder Structure
+- ✅ Full Stack Integration
 
-3️⃣ Setup Backend (FastAPI)
+---
 
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-
-Backend URL:
-http://127.0.0.1:8000
-
-Swagger Documentation:
-http://127.0.0.1:8000/docs
-
-4️⃣ Setup Frontend (Flask)
-Open a new terminal:
-cd frontend
-pip install flask requests
-python app.py
-
-Frontend URL:
-http://127.0.0.1:5000
-
-📬 API Endpoints
-➤ Create Student
-
-POST /students/
-Example JSON:
-
-{
-"name": "Namradha",
-"email": "namradha@gmail.com
-",
-"course": "Data Engineering"
-}
-
-➤ Get All Students
-GET /students/
-
-➤ Delete Student
-DELETE /students/{student_id}
+# 📂 Project Structure
