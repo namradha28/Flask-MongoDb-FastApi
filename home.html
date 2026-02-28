@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Innovative Student Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">NEXUS</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+        </ul>
+        <a href="/dashboard" class="btn btn-primary">Get Started</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Empowering the Future of Education</h1>
+        <p>A seamless, interactive, and high-performance student management ecosystem built with FastAPI, Flask, and
+            MongoDB.</p>
+        <div class="hero-buttons">
+            <a href="/dashboard" class="btn btn-primary">Launch Dashboard</a>
+            <a href="#about" class="btn"
+                style="border: 1px solid var(--glass-border); color: white; margin-left: 1rem;">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title">The Visionary Behind Nexus</h2>
+        <div class="glass profile-card">
+            <img src="https://ui-avatars.com/api/?name=Namradha+Mani&background=8b5cf6&color=fff&size=200"
+                alt="Namradha Mani" class="profile-img">
+            <div class="profile-info">
+                <h3>Namradha Mani</h3>
+                <p style="font-size: 1.1rem; color: var(--accent-secondary); margin-bottom: 1rem; font-weight: 600;">
+                    Lead Architect & Full Stack Developer</p>
+                <p>Namradha is a forward-thinking technologist dedicated to building scalable and intuitive digital
+                    solutions. With Nexus, she bridges the gap between complex backend systems and premium user
+                    experiences, setting a new standard for educational management tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Core Features</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <div class="glass" style="padding: 2rem;">
+                <h4 style="color: var(--accent-secondary); margin-bottom: 1rem;">Real-time Synergy</h4>
+                <p>Instant synchronization between MongoDB and the Flask frontend via FastAPI's high-speed endpoints.
+                </p>
+            </div>
+            <div class="glass" style="padding: 2rem;">
+                <h4 style="color: var(--accent-secondary); margin-bottom: 1rem;">Premium UI</h4>
+                <p>Meticulously crafted dark-themed interface with glassmorphism and smooth micro-animations.</p>
+            </div>
+            <div class="glass" style="padding: 2rem;">
+                <h4 style="color: var(--accent-secondary); margin-bottom: 1rem;">Scalable Data</h4>
+                <p>Optimized for growth, handling student records with the reliability of a production-grade backend.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 4rem 10%; text-align: center; border-top: 1px solid var(--glass-border);">
+        <p style="color: var(--text-secondary);">&copy; 2026 Nexus Project. Engineered with ❤️ by Namradha Mani.</p>
+    </footer>
+
+</body>
+
+</html>

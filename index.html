@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Student Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">NEXUS</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+        </ul>
+        <a href="/add" class="btn btn-primary">+ Add Student</a>
+    </nav>
+
+    <section class="section" style="margin-top: 4rem;">
+        <h2 class="section-title">Student Records Dashboard</h2>
+
+        <div class="glass table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td style="color: var(--text-secondary); font-size: 0.8rem;">
+                            #{{ student.id[:8] if student.id else 'N/A' }}
+                        </td>
+                        <td style="font-weight: 600;">{{ student.name or 'Unnamed' }}</td>
+                        <td style="color: var(--accent-secondary);">{{ student.email or 'No Email' }}</td>
+                        <td>
+                            <span
+                                style="background: rgba(139, 92, 246, 0.2); color: var(--accent-primary); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">
+                                {{ student.course or 'General' }}
+                            </span>
+                        </td>
+                        <td>
+                            {% if student.id %}
+                            <a href="/delete/{{ student.id }}"
+                                style="color: #ef4444; text-decoration: none; font-weight: 600;"
+                                onclick="return confirm('Are you sure you want to delete this student?')">Delete</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        {% if not students %}
+        <div style="text-align: center; padding: 4rem; color: var(--text-secondary);">
+            <p>No student records found. Start by adding a new record.</p>
+        </div>
+        {% endif %}
+    </section>
+
+</body>
+
+</html>
