@@ -78,7 +78,7 @@ fastapi-flask-mongo/
 
 ## 1️⃣ Clone the Repository
 
-```bash
+bash
 git clone https://github.com/your-username/fastapi-flask-mongo.git
 cd fastapi-flask-mongo
 
